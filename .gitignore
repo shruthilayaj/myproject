@@ -1,6 +1,7 @@
 .DS_Store
 .DS_Store?
 ._*
+.envrc
 *.egg-info
 *.pot
 *.py[co]
