@@ -16,7 +16,7 @@ import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
 sentry_sdk.init(
-    dsn="https://f865ab61c534403faf0df63746698c54@o530081.ingest.sentry.io/5649203",
+    dsn=os.environ['SENTRY_DSN'],
     integrations=[DjangoIntegration()],
     traces_sample_rate=1.0,
 
@@ -24,7 +24,7 @@ sentry_sdk.init(
     # django.contrib.auth) you may enable sending PII data.
     send_default_pii=True
 )
-release=os.environ.get("VERSION"),
+release=os.environ.get('VERSION'),
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent

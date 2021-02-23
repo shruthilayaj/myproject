@@ -6,7 +6,7 @@ from .serializers import BlogPostSerializer
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the blog index.")
+    return HttpResponse('Hello, world. You\'re at the blog index.')
 
 
 def blog_post_list(request):
