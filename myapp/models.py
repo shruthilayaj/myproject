@@ -13,4 +13,4 @@ class BlogPost(models.Model):
 class Ingredient(models.Model):
     ingredient = models.CharField(max_length=200)
     amount = models.IntegerField()
-    blog_post = models.ForeignKey(BlogPost, on_delete=models.CASCADE)
+    blog_post = models.ForeignKey(BlogPost, related_name='ingredients', on_delete=models.CASCADE)
