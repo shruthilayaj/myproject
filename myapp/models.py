@@ -10,6 +10,7 @@ class BlogPost(models.Model):
     def __str__(self) -> str:
         return self.title
 
+# Testing
 class Ingredient(models.Model):
     ingredient = models.CharField(max_length=200)
     amount = models.IntegerField()
